@@ -1,0 +1,184 @@
+body{
+    font-family: 'Cairo', sans-serif;
+}
+:root{
+    --main-color:#2196f3;
+    --main-color-alt:#1787e0;
+    --main-transition:0.3s;
+    --section-padding: 100px;
+    --color-background:#ECECEC;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+.design{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/background.png);
+    background-size: cover;
+}
+.design .container{
+    position: relative;
+}
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.container .header .logo{
+    width: 60px;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.links ul{
+    display: none;
+    z-index: 1;
+    transition: 0.5s;
+
+}
+.links:hover ul{
+    display: flex; 
+}
+.links img{
+    margin-left: 20px;
+    cursor: pointer;
+}
+.links ul li{
+    padding: 15px 10px;
+    position: relative;
+    margin-left: 35px;
+ 
+}
+.links ul li a{
+    color: white;
+}
+.links ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: wheat;
+    transition: 0.5s;
+}
+.links ul li a:hover::before{
+    width: 100%;
+}
+.box{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}
+.box .text{
+  flex-basis: 50%;
+}
+.box .text h1{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+.box .text p{
+    color: white;
+    line-height: 2;
+}
+.box .text button{
+    background: white ;
+    padding: 10px 20px;
+    color:black;
+    border: 1px solid white;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 150px;
+    cursor: pointer;
+}
+.images{
+    flex-basis: 50%;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: 00.5s;
+}
+.algeria{
+    background-image: url(images/pic-1.png);
+    background-position: center;
+    background-size: cover;
+}
+.egypt{
+    background-image: url(images/pic-2.png);
+    background-position: center;
+    background-size: cover;
+}
+.tunis{
+    background-image: url(images/pic-3.png);
+    background-position: center;
+    background-size: cover;
+}
+.qatar{
+    background-image: url(images/pic-4.png);
+    background-position: center;
+    background-size: cover;
+}
+.card h5{
+    color: white;
+    font-size: 14px;
+}
+.card p{
+    line-height: 1;
+    color: white;
+    font-size: 12px;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
